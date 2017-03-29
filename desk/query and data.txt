@@ -1,0 +1,19 @@
+ALTER TABLE paper_details
+ADD COLUMN kit_issued TINYINT(1) NULL DEFAULT 0 AFTER tutorial2;
+
+INSERT INTO paper_data (paper_id,paper_title) VALUES (1000000000,'Delegates without paper');
+
+CREATE TABLE admins (
+  userid VARCHAR(20) NOT NULL,
+  psswd VARCHAR(45) NOT NULL,
+  PRIMARY KEY (userid),
+  UNIQUE INDEX userid_UNIQUE (userid ASC)
+);
+
+INSERT INTO admins (userid,psswd) VALUES ('Ankush', '1234567890');
+
+as per now only one user information was inserted. 
+
+
+connections are in desk.php , deskUpdate.php , deskCheck.php 
+please change credentials in those files. 
